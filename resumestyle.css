@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  
+}
+
+body{
+  min-height: 100vh;
+  background-color: #96B6C5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.back button{
+  flex: 1;
+  margin-left: -462px;
+  margin-bottom: 500px;
+  height:50px;
+  width: 150px;
+  background-color: rgb(1, 18, 16);
+  align-items: left;
+  align-content: left;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+a{
+  text-decoration: none;
+  
+}
+
+.card{
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background-color: rgb(1, 18, 16);
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 10px 0 20px rgba(0,0,0,0.4), inset 300px 0 50px rgba(0,0,0,0.4);
+  transform: perspective(2000px) rotateZ(0);
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+}
+
+.cover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+}
+
+.cover img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.cover img:nth-child(2){
+  transform: rotateY(180deg);
+}
+
+.card:hover{
+  transform: perspective(2000px) rotateZ(-5deg) scale(1.2) translateY(-20px);
+  box-shadow: 10px 0 20px rgba(0,0,0,0.4), inset 20px 0 50px rgba(0,0,0,0.4);
+}
+
+.card:hover .cover{
+  transform: rotateY(-135deg);
+  box-shadow: 10px 0 20px rgba(0,0,0,0.4);
+}
+
+.content{
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  font-size: 10px;
+
+}
+
+.header{
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.left{
+  text-align: righ;
+  padding-left: 10px;
+  line-height: 12px;
+  font-size: 6px;
+}
+
+hr{
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+h4{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 12px;
+}
+
+h5{
+  font-size: 8px;
+}
